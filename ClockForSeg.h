@@ -21,7 +21,7 @@ enum mode{NONBLANK, BLANK};
 
 class ClockForSeg{
 	public :
-		ClockForSeg();
+		ClockForSeg(int _r1, int _r2, int _r3, int _s1, int _s2);
 		void init();
 		void displayTime(int _m = BLANK);
 		void changeBright(int _b);
