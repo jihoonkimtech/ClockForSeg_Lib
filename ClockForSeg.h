@@ -9,8 +9,8 @@
  * date  2021-06-18
 */
 
-#ifndef _UltraSonic_H_
-#define _UltraSonic_H_
+#ifndef _ClockForSeg_H_
+#define _ClockForSeg_H_
 
 #include <Arduino.h>
 #include <TM1637.h>
