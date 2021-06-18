@@ -75,6 +75,8 @@ _The contents of the example are see ``Exemples`` folder._
 
 ## Update History
 
+* 1.0.1
+    * Change depends library
 * 1.0.0
     * First official version
     * Develop Finished
