@@ -9,30 +9,29 @@
  * date  2021-06-18
 */
 
-#ifndef _ClockForSeg_H_
-#define _ClockForSeg_H_
-
 #include <Arduino.h>
 #include <TM1637.h>
 #include <ThreeWire.h>  
 #include <RtcDS1302.h>
+#include <Wire.h>
 
-enum mode{NONBLANK, BLANK};
+enum mode {NON_BLINK, BLINK};
 
 class ClockForSeg{
 	public :
 		ClockForSeg(int _r1, int _r2, int _r3, int _s1, int _s2);
 		void init();
-		void displayTime(int _m = BLANK);
-		void changeBright(int _b);
-	private :
+		void displayTime(int _m);
+		void setBright(int _b);
+		//String strTime;
+	//private :
 		void setNow();
 		void setTime();
-		char* makeTimeStr();
+		String makeTimeStr(int _p);
 		int RTC_CLK, RTC_DAT, RTC_RST;
 		int SEG_DIO, SEG_CLK;
-		RtcDateTime* NOW_TIME;
-		char* strTime;
+		
 		RtcDS1302<ThreeWire>* RTC;
 		TM1637* SEG;
+		ThreeWire* TW;
 };
